@@ -33,9 +33,10 @@
 
 </head>
 
-<body class="font-railway">
+<body class="font-railway transition-all duration-500">
 
-    <header class="flex flex-col gap-12 md:px-20 px-2 ">
+    <!-- header with navbar and hero section -->
+    <header class="flex flex-col gap-12 md:px-20 px-2 transition-all duration-500">
         <div class="navbar bg-base-500 mt-6 items-center justify-between">
             <div class="navbar-start  justify-start p-0 gap-2 pl-0">
                 <div class="dropdown lg:hidden  ">
@@ -92,30 +93,34 @@
                 <p class="max-w-xl text-lg font-light">Yes, you can run unit tests and view the results directly within
                     the app. The integrated testing
                     features allow for a streamlined .</p>
-                <a href="#buySection" class="btn bg-theme px-8  font-bold text-lg">
+                <a href="#buySection" class="btn bg-theme px-8  font-bold text-lg transition-all duration-500">
                     Buy Tickets
                 </a>
             </div>
         </div>
     </header>
 
+    <!-- coupons section -->
+
     <section id="couponSection" class="flex flex-col items-center justify-center my-20 gap-8">
 
-        <div class="flex items-center justify-center gap-8">
-            <div class="bg-[#FFBF0F] flex items-center justify-center rounded-md cursor-pointer hover:bg-[#FFBF0FE6] transition-all duration-150">
+        <div class="flex flex-col md:flex-row items-center justify-center gap-8">
+            <div
+                class="bg-[#FFBF0F] flex md:items-center justify-center rounded-md cursor-pointer hover:bg-[#FFBF0FE6] transition-all duration-150">
                 <div class="flex flex-col items-center justify-center gap-4 p-4">
                     <h1 class="text-3xl font-bold">15% OFF</h1>
                     <p class="font-bold text-md">on your next purchase</p>
                     <p>use by January 2024</p>
                 </div>
-                <img src="./images/cupon-devider.png" alt="coupon-devider">
+                <img src="./images/cupon-devider.png" alt="coupon-devider" class="min-h-full ">
                 <div class="flex flex-col items-center justify-center gap-4 p-4">
                     <h1 class="text-3xl font-bold ">NEW15</h1>
                     <p>Coupon Code</p>
                 </div>
             </div>
-    
-            <div class="bg-[#F78C9C] flex items-center justify-center rounded-md cursor-pointer hover:bg-[#F78C9CE6] transition-all duration-150">
+
+            <div
+                class="bg-[#F78C9C] flex md:items-center justify-center rounded-md cursor-pointer hover:bg-[#FFBF0FE6] transition-all duration-150">
                 <div class="flex flex-col items-center justify-center gap-4 p-4">
                     <h1 class="text-3xl font-bold">20% OFF</h1>
                     <p>on your next purchase</p>
@@ -129,8 +134,61 @@
             </div>
         </div>
 
-        <button class="btn bg-[#1DD1001A] text-theme font-bold border-2 border-theme hover:bg-[#1DD1004D]" >See All Offers</button>
+        <button class="btn bg-[#1DD1001A] text-theme font-bold border-2 border-theme hover:bg-[#1DD1004D]">See All
+            Offers</button>
 
+    </section>
+    <!-- ticket buying section -->
+    <section id="buySection"
+        class="w-full border-t-2 border-theme rounded-lg lg:px-20 p-2 py-20 min-h-screen flex flex-col items-center justify-center text-center gap-4 bg-[#F7F8F8] ">
+
+        <h1 class="text-3xl font-bold">P.H Paribahan</h1>
+        <p class="max-w-xl text-lg font-light ">Yes, you can run unit tests and view the results directly within the
+            app. The integrated testing features allow for a streamlined .</p>
+
+        <div class="w-full flex flex-col md:flex-row items-center bg-white ">
+            <div class="w-full flex flex-col  gap-4 p-8">
+                <div class="flex flex-col md:flex-row items-start md:items-center  md:justify-between w-full gap-4">
+                    <div class="flex items-center justify-center gap-4">
+                        <img src="./images/bus-logo.png" alt="">
+                        <div class="flex flex-col items-start justify-center">
+                            <h1 class="font-bold text-lg lg:text-2xl">Greenline Paribahan</h1>
+                            <p class="text-xs lg:text-base">Coach-009-WEB ! AC_Business</p>
+                        </div>
+                    </div>
+                    <button
+                        class="btn bg-[#1DD1001A] text-theme font-bold border-2 border-theme hover:bg-[#1DD1004D]"><img
+                            src="./images/seat-green-filled.png" alt="seat-green-filled.pngr"> 40 Seats left</button>
+                </div>
+
+                <div class="bg-[#F7F8F8] px-8 rounded-lg">
+                    <div class="border-b-2 border-dashed flex items-center justify-between py-4">
+                        <p class="text-[#03071299] font-semibold">Route</p>
+                        <p class="font-bold text-lg">Dhaka - Sylhet</p>
+                    </div>
+                    <div class="border-b-2 border-dashed flex items-center justify-between py-4">
+                        <p class="text-[#03071299] font-semibold">Departure Time</p>
+                        <p class="font-bold text-lg">9:00 PM</p>
+                    </div>
+
+                    <div class="border-b-2 border-dashed w-full py-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                        <button class="btn  font-bold bg-[#0307120D] ">Boarding Point - Laxmipur</button>
+                        <button class="btn  font-bold bg-[#0307120D] ">Dropping Point - Bogura</button>
+                        <button class="btn  font-bold bg-[#0307120D] ">Est. Time - 11 Hour</button>
+                    </div>
+                </div>
+
+            </div>
+
+            <img src="./images/info-devider.png" alt="info-devider.png" class="min-h-full hidden md:block">
+
+            <div class="flex flex-col items-center justify-center gap-2 min-w-[20%]">
+                <img src="./images/fare.png" alt="fare.png">
+                <h1 class="font-bold text-2xl">550 Taka</h1>
+                <p>Per Seat</p>
+            </div>
+
+        </div>
     </section>
 
 
