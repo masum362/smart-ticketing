@@ -6,6 +6,12 @@ const totalPriceContainer = document.getElementById("totalPrice");
 const grandTotalContainer = document.getElementById("grandTotal");
 const couponBtn = document.getElementById("couponBtn");
 const submitBtn = document.getElementById("submitBtn");
+const passengerName = document.getElementById("passengerName");
+const phoneNumber = document.getElementById("phoneNumber");
+
+
+
+
 
 let reservedSit = [];
 let totalPrice = 0;
@@ -93,8 +99,16 @@ couponBtn.addEventListener("click", function () {
 
 
 submitBtn.addEventListener("click",function(){
+
+  const passengerNameValue = passengerName.value
+  const phoneNumberValue = phoneNumber.value
+
+
   if(grandTotalPrice <=0){
     return alert("Minimum select 1 seat")
+  }
+  else if(passengerName == "" || phoneNumberValue =="" || phoneNumberValue.length!==11){
+    return alert("Please provide the passanger information");
   }else{
     const header =document.getElementsByTagName("header")[0];
     const footer =document.getElementsByTagName("footer")[0];
@@ -107,6 +121,7 @@ submitBtn.addEventListener("click",function(){
     modalSection.classList.remove("hidden");
 
     console.log({header});
+    console.log(passengerNameValue);
   }
 })
 
