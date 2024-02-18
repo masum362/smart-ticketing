@@ -157,7 +157,7 @@
                         </div>
                         <button
                             class="btn bg-[#1DD1001A] text-theme font-bold border-2 border-theme hover:bg-[#1DD1004D]"><img
-                                src="./images/seat-green-filled.png" alt="seat-green-filled.pngr"> 40 Seats
+                                src="./images/seat-green-filled.png" alt="seat-green-filled.pngr"> <span id="totalSeat">8</span> Seats
                             left</button>
                     </div>
 
@@ -206,7 +206,7 @@
 
                     </div>
                     <div class=" w-full flex items-center justify-end my-4">
-                        <div class="px-8 py-2 border-2 rounded-lg bg-[#0307121A]">
+                        <div class="px-8 py-2 border-2 rounded-lg bg-[#0307121A] cursor-pointer">
                             <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <g id="tabler-icon-steering-wheel">
@@ -224,16 +224,16 @@
 
                             <div class="flex items-center justify-center gap-8">
                                 <span
-                                    class="tickets bg-[#F7F8F8] text-[#03071280] py-3 px-4 lg:px-12 font-bold  cursor-pointer">A1</span>
+                                    class="tickets bg-[#F7F8F8] text-[#03071280] rounded-lg py-3 px-4 lg:px-12 font-bold  cursor-pointer">A1</span>
                                 <span
-                                    class="tickets bg-[#F7F8F8] text-[#03071280] py-3 px-4 lg:px-12 font-bold  cursor-pointer">A2</span>
+                                    class="tickets bg-[#F7F8F8] text-[#03071280] rounded-lg py-3 px-4 lg:px-12 font-bold  cursor-pointer">A2</span>
                             </div>
 
                             <div class="flex items-center justify-center gap-8">
                                 <span
-                                    class="tickets bg-[#F7F8F8] text-[#03071280] py-3 px-4 lg:px-12 font-bold  cursor-pointer">A3</span>
+                                    class="tickets bg-[#F7F8F8] text-[#03071280] rounded-lg py-3 px-4 lg:px-12 font-bold  cursor-pointer">A3</span>
                                 <span
-                                    class="tickets bg-[#F7F8F8] text-[#03071280] py-3 px-4 lg:px-12 font-bold  cursor-pointer">A4</span>
+                                    class="tickets bg-[#F7F8F8] text-[#03071280] rounded-lg py-3 px-4 lg:px-12 font-bold  cursor-pointer">A4</span>
                             </div>
 
                         </div>
@@ -242,16 +242,16 @@
 
                             <div class="flex items-center justify-center gap-8">
                                 <span
-                                    class="tickets bg-[#F7F8F8] text-[#03071280] py-3 px-4 lg:px-12 font-bold  cursor-pointer">B1</span>
+                                    class="tickets bg-[#F7F8F8] text-[#03071280] rounded-lg py-3 px-4 lg:px-12 font-bold  cursor-pointer">B1</span>
                                 <span
-                                    class="tickets bg-[#F7F8F8] text-[#03071280] py-3 px-4 lg:px-12 font-bold  cursor-pointer">B2</span>
+                                    class="tickets bg-[#F7F8F8] text-[#03071280] rounded-lg py-3 px-4 lg:px-12 font-bold  cursor-pointer">B2</span>
                             </div>
 
                             <div class="flex items-center justify-center gap-8">
                                 <span
-                                    class="tickets bg-[#F7F8F8] text-[#03071280] py-3 px-4 lg:px-12 font-bold  cursor-pointer">B3</span>
+                                    class="tickets bg-[#F7F8F8] text-[#03071280] rounded-lg py-3 px-4 lg:px-12 font-bold  cursor-pointer">B3</span>
                                 <span
-                                    class="tickets bg-[#F7F8F8] text-[#03071280] py-3 px-4 lg:px-12 font-bold  cursor-pointer">B4</span>
+                                    class="tickets bg-[#F7F8F8] text-[#03071280] rounded-lg py-3 px-4 lg:px-12 font-bold  cursor-pointer">B4</span>
                             </div>
 
                         </div>
@@ -267,12 +267,12 @@
                     <div class="p-4 flex flex-col gap-4 bg-[#F7F8F8]">
                         <div class="flex items-center justify-between py-2 font-bold border-b-2 border-dashed">
                             <span>Seat <sup id="bookedSeat"
-                                    class=" bg-theme text-white px-2 py-1 rounded-full">1</sup></span>
+                                    class=" bg-theme text-white px-2 py-1 rounded-full">0</sup></span>
                             <span>Class</span>
                             <span>Price</span>
                         </div>
-                        <div class="flex flex-col gap-4 border-b-2 pb-4">
-                            <div class="flex items-center justify-between">
+                        <div id="finalReserve" class="flex flex-col gap-4 border-b-2 pb-4">
+                            <!-- <div class="flex items-center justify-between">
                                 <span>C2</span>
                                 <span>Economoy</span>
                                 <span>550</span>
@@ -281,28 +281,28 @@
                                 <span>C2</span>
                                 <span>Economoy</span>
                                 <span>550</span>
-                            </div>
+                            </div> -->
                         </div>
 
                         <div class="font-bold flex items-center justify-between border-b-2 border-dashed py-3">
                             <span>Total Price</span>
-                            <span>BDT 1100</span>
+                            <span>BDT <span id="totalPrice">0</span></span>
                         </div>
 
-                        <div class="flex items-center w-full justify-center relative">
+                        <div id="couponDiv" class="flex items-center w-full justify-center relative">
                             <input type="text" name="couponInput" id="couponInput"
                                 class="w-full border-none outline-none p-4 rounded-lg bg-white"
-                                placeholder="Have any copupon?">
+                                placeholder="Have any copupon?" required>
                             <button
-                                class="btn bg-theme text-white px-8 absolute right-2 hover:opacity-80 hover:bg-theme">Apply</button>
+                                class="btn bg-theme text-white px-8 absolute right-2 hover:opacity-80 hover:bg-theme" id="couponBtn">Apply</button>
                         </div>
                         <div class="font-bold flex items-center justify-between">
                             <span>Grand Total</span>
-                            <span>BDT 1100</span>
+                            <span>BDT <span id="grandTotal">0</span></span>
                         </div>
                     </div>
                     <div class="space-y-4">
-                        <button
+                        <button id="submitBtn"
                             class="btn text-white bg-theme font-bold w-full text-lg hover:bg-theme hover:opacity-80 rounded-xl h-16">Next</button>
                     </div>
 
@@ -343,18 +343,19 @@
 
 
 
-    <!-- modal -->
-    <!-- <section class="flex items-center justify-center h-screen text-center">
+ 
+     <section id="modalSection" class="hidden flex items-center justify-center h-screen text-center">
         <div class="flex flex-col items-center justify-center gap-2">
             <img src="./images/success.png" alt="">
             <p class="font-bold text-lg">SUCCESS</p>
             <p class="font-medium max-w-md ">Thank you for Booking Our Bus Seats.
                 We are working hard to find the best service and deals for you.</p>
             <p class="max-w-sm ">Shortly you will find a confirmation in your email.</p>
-            <button class="btn bg-[#27AE60] text-white px-16 rounded-full hover:bg-theme ">Continue</button>
+            <a class="btn bg-[#27AE60] text-white px-16 rounded-full hover:bg-theme " href="/">Continue</a>
         </div>
-    </section> -->
+    </section>
 
+    <script src="./js/script.js"></script>
 
 </body>
 
